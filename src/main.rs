@@ -1,10 +1,10 @@
 use env_logger::{Builder, Target};
-use log::{debug, error, log_enabled, info, Level, LevelFilter};
+use log::{debug, error, info, log_enabled, Level, LevelFilter};
 use std::env;
 
 use clap::Parser;
-use clipboard::ClipboardProvider;
 use clipboard::ClipboardContext;
+use clipboard::ClipboardProvider;
 use configparser::ini::Ini;
 
 #[derive(Parser)]
