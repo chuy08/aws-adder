@@ -1,0 +1,15 @@
+[package]
+authors = [ "Jesus Orosco <chuy08@gmail.com>" ]
+description = "Copy paste buffer into aws credentials file using profiles" 
+edition = "2021"
+name = "aws-adder"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "3.1.15", features = ["derive"] }
+clipboard = "0.5.0"
+configparser = "3.0.0"
+env_logger = "0.9.0"
+log = "0.4.17"
