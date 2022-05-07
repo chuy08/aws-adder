@@ -1,4 +1,5 @@
-use log::{debug, error, log_enabled, info, Level};
+use env_logger::{Builder, Target};
+use log::{debug, error, log_enabled, info, Level, LevelFilter};
 use std::env;
 
 use clap::Parser;
@@ -20,7 +21,13 @@ struct Args {
 }
 
 fn main() {
-    env_logger::init();
+    //env_logger::init();
+    let mut builder = Builder::new();
+    builder
+        .filter_level(LevelFilter::Info)
+        .target(Target::Stdout)
+        .init();
+
     let args = Args::parse();
 
     let mut config = Ini::new();
