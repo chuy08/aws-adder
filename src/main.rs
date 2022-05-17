@@ -22,9 +22,8 @@ struct Args {
 
 fn main() {
     //env_logger::init();
-    let mut builder = Builder::new();
+    let mut builder = Builder::from_default_env();
     builder
-        .filter_level(LevelFilter::Info)
         .target(Target::Stdout)
         .init();
 
